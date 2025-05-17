@@ -17,7 +17,7 @@ int main() {
 		std::vector<int>::iterator it = easyfind(vec, 30);
 		std::cout << "Found in vector: " << *it << std::endl;
 
-		std::list<int>::iterator it2 = easyfind(lst, 200);
+		std::list<int>::iterator it2 = easyfind(lst, 300);
 		std::cout << "Found in list: " << *it2 << std::endl;
 
 		easyfind(vec, 99);
