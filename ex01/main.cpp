@@ -37,6 +37,29 @@ int main()
 	try
 	{
 		Span sp = Span(5);
+		sp.addIterNumbers(3, 10);
+		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << sp.longestSpan() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	try
+	{
+		Span sp = Span(5);
+		sp.addIterNumbers(3, 6);
+		sp.printSpan();
+		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << sp.longestSpan() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	try
+	{
+		Span sp = Span(5);
 		sp.addNumber(6);
 		std::cout << sp.shortestSpan() << std::endl;
 	}

@@ -17,27 +17,28 @@ class Span
 		Span(const Span& copy);
 		Span& operator=(const Span& copy);
 		~Span();
-		/**
-		 * 
-		 * ft addNumber() aggiunge un solo numero
-		 * allo Span. Questa sarà usata per riempirlo.
-		 * Ogni tentativo di superare N elementi
-		 * immagazzinati dovrebbe lanciare un eccezione.
-		 *  
-		 * ft shortestspan() che troverà la più piccola 
-		 * distanza tra due numeri facenti parte dello span
-		 * ovvero con la minore differenza
-		 * 
-		 * ft longestSpan() che invece troverà la più grande
-		 * differenza tra due numeri dello span
-		 * 
-		 */
 		void addNumber(int num);
+		template <typename IteratorElem>
+		void addIterNumbers(IteratorElem begin, IteratorElem end);
 		unsigned int getN() const;
 		std::vector<int> getSpan() const;
+		void printSpan();
 		int longestSpan();
 		int shortestSpan();
 
 };
+
+template <typename IteratorElem>
+void	Span::addIterNumbers(IteratorElem begin, IteratorElem end)
+{
+	if ((span.size() + (unsigned int)(end - begin)) > N)
+		throw std::runtime_error("Range over N elements!");
+	while (begin != end)
+	{
+		addNumber(begin);
+		begin++;
+	}
+}
+
 
 #endif

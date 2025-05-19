@@ -38,6 +38,7 @@ int	Span::longestSpan()
 	return max_span;
 }
 
+
 int Span::shortestSpan()
 {
 	if (span.size() < 2)
@@ -53,6 +54,14 @@ int Span::shortestSpan()
 			sum = copy.at(i) - copy.at(i - 1);
 	}
 	return sum;
+}
+
+void Span::printSpan()
+{
+	for (size_t i = 0; i < span.size(); i++)
+	{
+		std::cout << span[i] << " numero" << std::endl;
+	}
 }
 
 unsigned int Span::getN() const
