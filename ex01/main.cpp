@@ -10,8 +10,8 @@ int main()
 		sp.addNumber(17);
 		sp.addNumber(9);
 		sp.addNumber(11);
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
+		std::cout << "Shortest Span 1 = " << sp.shortestSpan() << std::endl;
+		std::cout << "Longest Span 1 = "  << sp.longestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -27,8 +27,8 @@ int main()
 		sp.addNumber(11);
 		sp.addNumber(16);
 		sp.addNumber(8);
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
+		std::cout << "Shortest Span 2 = " << sp.shortestSpan() << std::endl;
+		std::cout << "Longest Span 2 = "  << sp.longestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -38,8 +38,8 @@ int main()
 	{
 		Span sp = Span(5);
 		sp.addIterNumbers(3, 10);
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
+		std::cout << "Shortest Span 3 = " << sp.shortestSpan() << std::endl;
+		std::cout << "Longest Span 3 = "  << sp.longestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -49,9 +49,8 @@ int main()
 	{
 		Span sp = Span(5);
 		sp.addIterNumbers(3, 6);
-		sp.printSpan();
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
+		std::cout << "Shortest Span 4 = " << sp.shortestSpan() << std::endl;
+		std::cout << "Longest Span 4 = "  << sp.longestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -61,7 +60,7 @@ int main()
 	{
 		Span sp = Span(5);
 		sp.addNumber(6);
-		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << "Single shot " << sp.shortestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -71,7 +70,7 @@ int main()
 	{
 		Span sp = Span(5);
 		sp.addNumber(6);
-		std::cout << sp.longestSpan() << std::endl;
+		std::cout << "Single shot "  << sp.longestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
